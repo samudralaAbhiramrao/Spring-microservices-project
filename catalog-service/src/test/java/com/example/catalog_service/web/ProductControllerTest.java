@@ -1,17 +1,16 @@
 package com.example.catalog_service.web;
 
-import com.example.catalog_service.AbstractIT;
-import com.example.catalog_service.domain.Product;
-import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Test;
-import org.springframework.test.context.jdbc.Sql;
-
-import java.math.BigDecimal;
-
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
+
+import com.example.catalog_service.AbstractIT;
+import com.example.catalog_service.domain.Product;
+import io.restassured.http.ContentType;
+import java.math.BigDecimal;
+import org.junit.jupiter.api.Test;
+import org.springframework.test.context.jdbc.Sql;
 
 @Sql("/test-data.sql")
 public class ProductControllerTest extends AbstractIT {
@@ -61,6 +60,6 @@ public class ProductControllerTest extends AbstractIT {
                 .statusCode(500)
                 .body("status", is(500))
                 .body("title", is("Internal Server Error"))
-                .body("detail", is("Product Not Found with Code : "+code));
+                .body("detail", is("Product Not Found with Code : " + code));
     }
 }

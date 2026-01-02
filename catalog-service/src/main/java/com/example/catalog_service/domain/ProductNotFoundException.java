@@ -1,12 +1,12 @@
 package com.example.catalog_service.domain;
 
-public class ProductNotFoundException extends RuntimeException{
+public class ProductNotFoundException extends RuntimeException {
 
-    public ProductNotFoundException(String message){
+    public ProductNotFoundException(String message) {
         super(message);
     }
 
-    public static ProductNotFoundException forCode (String code){
-        return  new ProductNotFoundException("Product Not Found with Code : "+code);
+    public static ProductNotFoundException forCode(String code) {
+        return new ProductNotFoundException("Product Not Found with Code : " + code);
     }
 }
