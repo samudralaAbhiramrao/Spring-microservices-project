@@ -11,10 +11,8 @@ public class RabbitMQListener {
         System.out.println("Received Order Payload: " + payload);
     }
 
-
     @RabbitListener(queues = "${orders.delivered-orders-queue}")
     public void handleDeliveredOrder(MyPayload payload) {
         System.out.println("Received Order Payload: " + payload);
-        }
-
     }
+}

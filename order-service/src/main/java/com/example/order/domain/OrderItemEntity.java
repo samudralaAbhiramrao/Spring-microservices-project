@@ -1,7 +1,6 @@
 package com.example.order.domain;
 
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
 @Entity

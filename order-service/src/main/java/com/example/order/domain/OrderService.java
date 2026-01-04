@@ -1,6 +1,5 @@
 package com.example.order.domain;
 
-
 import com.example.order.domain.models.CreateOrderRequest;
 import com.example.order.domain.models.CreateOrderResponse;
 import jakarta.validation.Valid;
@@ -20,7 +19,6 @@ public class OrderService {
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
-
 
     public CreateOrderResponse createOrder(String userName, @Valid CreateOrderRequest request) {
 
